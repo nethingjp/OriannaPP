@@ -4,14 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LeagueSharp;
+using LeagueSharp.Common;
 
 namespace Orianna__
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public const string ChampionName = "Orianna";
+
+        public static void main(string[] args)
         {
-            Game.PrintChat("Hello World!");
+            //Events
+            CustomEvents.Game.OnGameLoad += Game_OnLoad;
+            Drawing.OnDraw += Drawing_OnDraw;
+            GameObject.OnCreate += GameObject_OnCreate;
         }
+
+        static void Game_OnLoad(EventArgs args)
+        {
+            //Initialize spells
+
+        }
+
+        static void Drawing_OnDraw(EventArgs args)
+        {
+
+        }
+
+        static void GameObject_OnCreate(GameObject sender, EventArgs args)
+        {
+
+        }
+
     }
+
+    
 }
